@@ -81,4 +81,57 @@ void loop(){
  // Serial.print(calibration_factor);
   Serial.println();
   delay(1000);
+
+ if(BMI<=18.4){
+    Serial.println("You are in Underweight");
+    Serial.println("A healthy diat chart for you");
+    Serial.println("1. Eat more often.");
+    Serial.println("2. Drink Milk.");
+    Serial.println("3. Get Quality Sleep");
+    Serial.println("4. Eat Fruits.");   
+    }
+
+else if  (BMI>18.4 && BMI<=24.9){
+    Serial.println("You are Healthy");
+    Serial.println("A healthy diat chart for you");
+    Serial.println("1. Eat healthy food");
+    Serial.println("2. Drink Water");
+    Serial.println("3. Drink Milk");
+    Serial.println("4. Eat more Vegetables");
+}
+
+else if (BMI>=25.0 && BMI<=29.9){
+    Serial.println("You are Overweight");
+    Serial.println("A healthy diat chart for you");
+    Serial.println("1. Eat high fibre foods");
+    Serial.println("2. Do not stock junk food");
+    Serial.println("3. Plan your meals");
+    Serial.println("4. Cut down on alcohol");
+}
+
+else if(BMI>=30){
+    Serial.println("You are Obsee");
+    Serial.println("A healthy diat chart for you");
+    Serial.println("1. Eat more vegetables - add them at every meal.");
+    Serial.println("2. Try eating off smaller plates so as to eat smaller portions");
+    Serial.println("3. Choose minimally processed, whole foods");
+    Serial.println("4. Drink water or other beverages that are naturally calorie-free");
+}
+//  if(Serial.available())
+//  {
+//    char temp = Serial.read();
+//    Serial.println("temp"+temp);
+//    Serial.println(temp);
+//    if(temp == '+' || temp == 'a')
+//      calibration_factor += 1;
+//    else if(temp == '-' || temp == 'z')
+//      calibration_factor -= 1;
+//  }
+//  if(Serial.available())
+//  {
+//    char temp = Serial.read();
+//    if(temp == 't' || temp == 'T')
+//      scale.tare();
+//  }
+}
  
