@@ -38,3 +38,21 @@ void setup() {
   //Serial.print("Zero factor: "); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
   //Serial.println(zero_factor);
 }
+
+void loop(){
+
+  Serial.print("Reading: ");
+  units = scale.get_units(10), 2;
+  //units = (units*0.454)-0.02;
+  //Serial.print(units);
+  if (units < 0)
+  {
+    units = 0.00;
+    //Serial.print(units);
+    //Serial.print("please enter the weight more then 1 kg");
+    
+  }
+  else{
+    units = ((units*0.454)-0.02)/2;
+    
+  }
