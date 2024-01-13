@@ -56,3 +56,29 @@ void loop(){
     units = ((units*0.454)-0.02)/2;
     
   }
+  digitalWrite(8, LOW);        
+  delayMicroseconds(2);              
+  digitalWrite(8, HIGH);
+  delayMicroseconds(10);           
+  digitalWrite(8, LOW);
+  duration = pulseIn(9, HIGH);
+  distance = duration*0.0343/2;
+  Length =  ((180 - distance)/100);
+
+  BMI= (units/(Length*Length));
+
+  Serial.print("Length: ");
+  Serial.print(Length);
+  Serial.print("m");
+  Serial.println();
+  Serial.print("weight: ");
+  Serial.print(units);
+  Serial.print(" KG");
+  Serial.println();
+  Serial.print("BMI: ");
+  Serial.print(BMI); 
+ // Serial.print(" calibration_factor: ");
+ // Serial.print(calibration_factor);
+  Serial.println();
+  delay(1000);
+ 
